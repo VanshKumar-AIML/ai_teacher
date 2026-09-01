@@ -3,7 +3,8 @@ https://img.shields.io/badge/License-MIT-yellow.svg
 
 An AI‑powered virtual teacher that understands uploaded educational content or any user‑provided topic, generates personalised lessons, and delivers them through a human‑like AI avatar video. The system supports multilingual teaching, interactive questioning, misconception detection, adaptive teaching, and final assessment with feedback.
 
-✨ Features
+✨ Features :
+
 📚 Learn from uploaded materials – PDF, DOCX, PPTX, TXT.
 
 🧠 Topic‑based teaching – No material needed; teach any subject.
@@ -31,12 +32,14 @@ LLM	OpenAI GPT‑4 (or GPT‑3.5‑Turbo)
 RAG	ChromaDB, LangChain
 Text Extraction	PyPDF2, python‑docx, python‑pptx
 Video Generation	D‑ID API (talking avatar)
+
 TTS	D‑ID built‑in / Microsoft Azure
 Frontend	React, Tailwind CSS, Video.js
 Real‑time	WebSockets (native)
 Deployment	Docker, Nginx
+
 🏗️ Architecture Overview
-text
+```
 ┌─────────────────┐     ┌─────────────────────────────────────────────────┐
 │   Frontend      │────▶│   Backend (FastAPI)                            │
 │  (React +      │     │  - File Upload & Text Extraction               │
@@ -53,6 +56,7 @@ text
                         │  - OpenAI API            │
                         │  - D‑ID API              │
                         └─────────────────────────┘
+```
 🚀 Getting Started
 Prerequisites
 Python 3.10+
@@ -118,18 +122,21 @@ Adaptation – if you answer incorrectly, the teacher provides an alternative ex
 Assessment – a final quiz evaluates your understanding; get a score, weak areas, and personalised revision suggestions.
 
 📡 API Endpoints
-Endpoint	Method	Description
-/api/upload	POST	Upload a file and extract text
-/api/lesson	POST	Generate a lesson plan from file/topic + settings
-/api/video	POST	Generate an AI avatar video from the lesson plan
-/api/assessment	POST	Evaluate quiz answers and return feedback
-/api/ws/{session_id}	WebSocket	Real‑time Q&A during the lesson
+
+Endpoint	Method	Description :
+
+/api/upload	POST	-> Upload a file and extract text
+/api/lesson	POST ->	Generate a lesson plan from file/topic + settings
+/api/video	POST -> Generate an AI avatar video from the lesson plan
+/api/assessment	POST -> Evaluate quiz answers and return feedback
+/api/ws/{session_id} -> WebSocket	Real‑time Q&A during the lesson
+
 🧪 Testing
 Backend tests (placeholders for future):
-
 bash
 cd backend
 pytest
+
 📁 Project Structure
 ```
 ai-teacher/
@@ -164,10 +171,6 @@ This project is licensed under the MIT License – see the LICENSE file for deta
 
 🙏 Acknowledgements
 OpenAI – LLM and embeddings
-
 D‑ID – AI avatar video generation
-
 LangChain – RAG orchestration
-
 ChromaDB – vector store
-
