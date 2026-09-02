@@ -31,7 +31,6 @@ def generate_video(lesson_plan: Dict[str, Any], language: str = "en", avatar_id:
     payload = {
         "script": {
             "type": "text",
-            "subtitles": True,
             "provider": {
                 "type": "microsoft",
                 "voice_id": voice_id
@@ -54,7 +53,7 @@ def generate_video(lesson_plan: Dict[str, Any], language: str = "en", avatar_id:
     talk_id = response.json()["id"]
 
     # Poll for completion (simplified - could use webhooks)
-    for _ in range(30):
+    for _ in range(150):
         time.sleep(2)
         status_response = requests.get(f"{DID_API_URL}/{talk_id}", headers=headers)
         if status_response.status_code == 200:

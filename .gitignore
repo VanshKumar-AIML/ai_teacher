@@ -1,0 +1,12 @@
+# Frontend
+frontend/node_modules/
+frontend/build/
+
+# Backend
+backend/venv/
+backend/.env
+backend/chroma_db/
+
+# Python
+__pycache__/
+*.pyc
