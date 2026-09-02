@@ -1,5 +1,5 @@
 from fastapi import APIRouter, HTTPException
-from app.models.schemas import LessonSettings, LessonPlan
+from app.models.schema import LessonSettings, LessonPlan
 from app.core.llm import generate_lesson_plan
 from app.core.rag import RAGEngine
 import os

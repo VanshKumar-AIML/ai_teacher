@@ -2,6 +2,9 @@ import openai
 import os
 import json
 from typing import List, Dict, Any
+from dotenv import load_dotenv
+
+load_dotenv()
 
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
@@ -33,7 +36,7 @@ Keep explanations concise but thorough, and tailor difficulty to the learner's l
 The total lesson (including questions) should fit within the given time.
 """
     response = openai.ChatCompletion.create(
-        model="gpt-4",
+        model="gpt-4o-mini",
         messages=[{"role": "user", "content": prompt}],
         temperature=0.7,
         max_tokens=2000,
@@ -61,7 +64,7 @@ Determine if the student's answer is essentially correct. Provide a brief feedba
 Return JSON with keys: "correct" (boolean), "feedback" (string).
 """
     response = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo",
+        model="gpt-4o-mini",
         messages=[{"role": "user", "content": prompt}],
         temperature=0.3,
         max_tokens=200,
@@ -80,7 +83,7 @@ A student gave this answer to a question about "{concept}": "{wrong_answer}".
 Provide a clear, simplified alternative explanation of the concept to help the student understand correctly.
 """
     response = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo",
+        model="gpt-4o-mini",
         messages=[{"role": "user", "content": prompt}],
         temperature=0.7,
         max_tokens=300,

@@ -1,5 +1,5 @@
 from fastapi import APIRouter, HTTPException
-from app.models.schemas import VideoRequest
+from app.models.schema import VideoRequest
 from app.core.video_generator import generate_video
 import uuid
 

@@ -1,7 +1,7 @@
 from fastapi import APIRouter, WebSocket, WebSocketDisconnect, HTTPException
 from app.core.llm import evaluate_answer, generate_alternative_explanation
 from app.core.assessment import generate_assessment
-from app.models.schemas import AssessmentRequest
+from app.models.schema import AssessmentRequest
 import json
 import asyncio
 
