@@ -141,21 +141,52 @@ pytest
 ai-teacher/
 ├── backend/
 │   ├── app/
+│   │   ├── __init__.py
 │   │   ├── main.py
-│   │   ├── models/
-│   │   ├── routes/
 │   │   ├── core/
+│   │   │   ├── __init__.py
+│   │   │   ├── rag.py
+│   │   │   ├── llm.py
+│   │   │   ├── video_generator.py
+│   │   │   └── assessment.py
+│   │   ├── models/
+│   │   │   ├── __init__.py
+│   │   │   └── schemas.py
+│   │   ├── routes/
+│   │   │   ├── __init__.py
+│   │   │   ├── upload.py
+│   │   │   ├── lesson.py
+│   │   │   ├── video.py
+│   │   │   └── interaction.py
 │   │   └── utils/
+│   │       ├── __init__.py
+│   │       ├── file_parser.py
+│   │       └── language.py
 │   ├── requirements.txt
 │   ├── Dockerfile
 │   └── .env.example
+│
 ├── frontend/
+│   ├── public/
+│   │   └── index.html
 │   ├── src/
-│   │   ├── components/
+│   │   ├── index.js
+│   │   ├── index.css
 │   │   ├── App.js
-│   │   └── api.js
+│   │   ├── api.js
+│   │   ├── context/
+│   │   │   └── ThemeContext.js          # dark mode context
+│   │   └── components/
+│   │       ├── Upload.js                
+│   │       ├── LessonSettings.js        
+│   │       ├── VideoPlayer.js           
+│   │       ├── ChatInterface.js         
+│   │       └── Assessment.js            
 │   ├── package.json
-│   └── Dockerfile
+│   ├── tailwind.config.js               # darkMode: 'class'
+│   ├── Dockerfile
+│   └── .env
+│
 ├── docker-compose.yml
 └── README.md
 ```
