@@ -1,5 +1,4 @@
 AI Teacher: Human‑Like Virtual Educator
-https://img.shields.io/badge/License-MIT-yellow.svg
 
 An AI‑powered virtual teacher that understands uploaded educational content or any user‑provided topic, generates personalised lessons, and delivers them through a human‑like AI avatar video. The system supports multilingual teaching, interactive questioning, misconception detection, adaptive teaching, and final assessment with feedback.
 
